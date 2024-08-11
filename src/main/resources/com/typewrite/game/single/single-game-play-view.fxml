@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.single.SingleGamePlayController">
+   <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+      <viewport>
+         <Rectangle2D height="720.0" minX="220.0" minY="320.0" width="1280.0" />
+      </viewport>
+      <Image url="@../assets/background.jpg" />
+   </ImageView>
+   <AnchorPane fx:id="gamePane" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);">
+      <AnchorPane layoutX="90.0" layoutY="110.0" prefHeight="500.0" prefWidth="600.0" styleClass="game-card">
+         <Rectangle arcHeight="5.0" arcWidth="5.0" height="220.0" layoutX="40.0" layoutY="15.0" width="500.0" styleClass="game-canvas-rect" />
+         <Canvas fx:id="canvas" height="220.0" layoutX="40.0" layoutY="15.0" width="500.0" />
+         <TextArea fx:id="textArea" layoutX="40.0" layoutY="265.0" prefHeight="220.0" prefWidth="500.0" styleClass="game-text-area" wrapText="true" />
+      </AnchorPane>
+      <AnchorPane layoutX="830.0" layoutY="110.0" prefHeight="500.0" prefWidth="401.0" styleClass="game-card">
+         <Rectangle fx:id="progress" arcHeight="5.0" arcWidth="5.0" fill="#23bc08" height="10.0" layoutX="20.0" layoutY="142.0" stroke="#23bc08" strokeType="INSIDE" width="360.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="transparent" height="14.0" layoutX="20.0" layoutY="140.0" stroke="#676767" strokeType="INSIDE" width="360.0" />
+         <ImageView fx:id="car" fitHeight="34.0" fitWidth="47.0" layoutX="-3.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/racing car game.png" />
+         </ImageView>
+         <Circle fill="#46b6cb" layoutX="45.0" layoutY="60.0" radius="31.0" stroke="#a6a6a6" strokeType="INSIDE" />
+         <Label fx:id="nameInitials" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="45.0" prefHeight="29.0" prefWidth="47.0" styleClass="initials-label" textAlignment="CENTER" />
+         <Label fx:id="name" alignment="CENTER_RIGHT" layoutX="95.0" layoutY="43.0" prefHeight="34.0" prefWidth="285.0" styleClass="player-name-label" text="Player" />
+         <Line endX="299.0" endY="-1.52587890625E-5" layoutX="101.0" layoutY="99.0" startX="-100.0" stroke="#9a9a9a" />
+         <ImageView fitHeight="40.0" fitWidth="46.0" layoutX="25.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/speedometer.png" />
+         </ImageView>
+         <ImageView fitHeight="50.0" fitWidth="79.0" layoutX="8.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/time.png" />
+         </ImageView>
+         <ImageView fitHeight="50.0" fitWidth="79.0" layoutX="25.0" layoutY="332.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/mistake.png" />
+         </ImageView>
+         <Label fx:id="wpm" layoutX="83.0" layoutY="207.0" prefHeight="29.0" prefWidth="197.0" styleClass="game-stats-label" text="??" />
+         <Label fx:id="usedTime" layoutX="83.0" layoutY="275.0" prefHeight="29.0" prefWidth="197.0" styleClass="game-stats-label" text="0 S" />
+         <Label fx:id="mistakesLabel" layoutX="83.0" layoutY="342.0" prefHeight="29.0" prefWidth="197.0" styleClass="game-stats-label" text="0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="transparent" height="62.0" layoutX="20.0" layoutY="190.0" stroke="#777777" strokeType="INSIDE" width="360.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="transparent" height="62.0" layoutX="20.0" layoutY="259.0" stroke="#777777" strokeType="INSIDE" width="360.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="transparent" height="62.0" layoutX="20.0" layoutY="327.0" stroke="#777777" strokeType="INSIDE" width="360.0" />
+      </AnchorPane>
+   </AnchorPane>
+</StackPane>

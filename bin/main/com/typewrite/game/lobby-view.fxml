@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #303030;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.lobby.LobbyView">
+   <stylesheets>
+      <URL value="@assets/style.css" />
+   </stylesheets>
+   <ImageView fitHeight="800.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="false">
+      <Image url="@assets/home.png" />
+   </ImageView>
+   <Label fx:id="titleLabel" layoutX="46.0" layoutY="30.0" style="-fx-padding: 5px;" styleClass="game-card" text="TypeRacer Lobby">
+      <font>
+         <Font size="30.0" />
+      </font>
+   </Label>
+   <ScrollPane fx:id="playersPane" layoutX="46.0" layoutY="180.0" prefHeight="547.0" prefWidth="521.0" styleClass="card-pane">
+      <VBox fx:id="playersBox" prefHeight="679.0" prefWidth="505.0" />
+   </ScrollPane>
+   <Label fx:id="playersLabel" layoutX="46.0" layoutY="123.0" style="-fx-padding: 5px;" styleClass="game-card" text="Players: ">
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Label>
+   <Button fx:id="readyButton" layoutX="1070.0" layoutY="154.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="131.0" styleClass="button" text="Ready" />
+   <TextField fx:id="nameField" layoutX="952.0" layoutY="105.0" prefHeight="36.0" prefWidth="250.0" style="-fx-padding: 5px;" styleClass="game-card" />
+   <Label fx:id="nameLabel" layoutX="847.0" layoutY="105.0" prefHeight="36.0" prefWidth="85.0" style="-fx-padding: 5px;" styleClass="game-card" text="Name">
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Label>
+   <Label fx:id="waitingLabel" layoutX="844.0" layoutY="30.0" prefHeight="65.0" prefWidth="360.0" style="-fx-padding: 5px;" styleClass="game-card" text="Game starting in 3...2...1" />
+   <VBox fx:id="chatVbox" layoutX="844.0" layoutY="218.0" prefHeight="377.0" prefWidth="360.0" styleClass="card-pane" />
+   <TextField fx:id="chatTextField" layoutX="844.0" layoutY="607.0" prefHeight="54.0" prefWidth="241.0" styleClass="game-card" />
+   <Button fx:id="messageSend" layoutX="1108.0" layoutY="607.0" mnemonicParsing="false" styleClass="button" text="Send" />
+   <Button fx:id="addPlayer" layoutX="847.0" layoutY="684.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="241.0" styleClass="button" text="AddPlayer" />
+</AnchorPane>

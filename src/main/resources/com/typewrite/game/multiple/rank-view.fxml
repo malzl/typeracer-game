@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.multiple.RankController">
+   <AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="root-pane"> <AnchorPane layoutX="410.0" layoutY="136.0" prefHeight="522.0" prefWidth="455.0" style="-fx-background-color: rgba(49,47,47,0.7); -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(49,47,47,0.83), 10, 0.5, 0, 0);" styleClass="game-card">
+
+      <!-- Player 1 -->
+         <AnchorPane fx:id="player1" layoutY="71.0" prefHeight="83.0" prefWidth="455.0" styleClass="card-pane">
+            <Line endX="340.33" endY="0.0" layoutX="115.0" layoutY="69.0" startX="-115.0" startY="0.0" stroke="#e84393" />
+            <Label layoutX="70.0" layoutY="30.0" text="user1" />
+            <Label layoutX="193.0" layoutY="30.0" text="11 WPM" />
+            <Label alignment="CENTER_RIGHT" layoutX="372.0" layoutY="30.0" prefHeight="23.0" prefWidth="69.0" text="No.1" />
+            <ImageView fitHeight="26.0" fitWidth="69.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+         </AnchorPane>
+
+         <!-- Player 2 -->
+         <AnchorPane fx:id="player2" layoutX="-1.0" layoutY="154.0" prefHeight="83.0" prefWidth="455.0" styleClass="card-pane">
+            <Line endX="340.33" endY="0.0" layoutX="115.0" layoutY="69.0" startX="-115.0" startY="0.0" stroke="#e84393"/>
+            <Label layoutX="70.0" layoutY="30.0" text="user2" />
+            <Label layoutX="193.0" layoutY="30.0" text="8 WPM" />
+            <Label alignment="CENTER_RIGHT" layoutX="372.0" layoutY="30.0" prefHeight="23.0" prefWidth="69.0" text="No.2" />
+            <ImageView fitHeight="26.0" fitWidth="66.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+         </AnchorPane>
+
+         <!-- Player 3 -->
+         <AnchorPane fx:id="player3" layoutY="237.0" prefHeight="83.0" prefWidth="455.0" styleClass="card-pane">
+            <Line endX="344.0" endY="0.0" layoutX="115.0" layoutY="69.0" startX="-115.0" startY="0.0" stroke="#e84393"/>
+            <Label layoutX="70.0" layoutY="30.0" text="user3" />
+            <Label layoutX="193.0" layoutY="30.0" text="6 WPM" />
+            <Label alignment="CENTER_RIGHT" layoutX="372.0" layoutY="30.0" prefHeight="23.0" prefWidth="69.0" text="No.3" />
+            <ImageView fitHeight="26.0" fitWidth="66.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+         </AnchorPane>
+
+         <!-- Player 4 -->
+         <AnchorPane fx:id="player4" layoutX="2.0" layoutY="320.0" prefHeight="83.0" prefWidth="455.0" styleClass="card-pane">
+            <Line endX="340.33" endY="0.0" layoutX="115.0" layoutY="69.0" startX="-115.0" startY="0.0" stroke="#e84393"/>
+            <Label layoutX="70.0" layoutY="30.0" text="user4" />
+            <Label layoutX="193.0" layoutY="30.0" text="4 WPM" />
+            <Label alignment="CENTER_RIGHT" layoutX="372.0" layoutY="30.0" prefHeight="23.0" prefWidth="69.0" text="No.4" />
+            <ImageView fitHeight="26.0" fitWidth="66.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" />
+         </AnchorPane>
+
+         <!-- Back to Home Button -->
+         <Button fx:id="backToHomeButton" layoutX="126.0" layoutY="440.0" mnemonicParsing="false" onAction="#toHome" styleClass="button" text="Back to Home" />
+      </AnchorPane>
+
+      <ImageView fx:id="racingCarImage" fitHeight="173.0" fitWidth="437.0" layoutX="486.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/racing car.png" />
+         </image>
+      </ImageView>
+   <Label layoutX="515.0" layoutY="145.0" style="-fx-font-size: 37; -fx-font-family: 'Arial Black';" text="GAME OVER" textFill="WHITE" />
+   </AnchorPane>
+</StackPane>

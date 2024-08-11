@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="root-pane" stylesheets="@assets/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.multiple.ClientView">
+
+    <!-- Start Image -->
+    <ImageView fx:id="startImage" fitHeight="210.0" fitWidth="317.0" layoutX="28.0" layoutY="254.0" preserveRatio="true" rotate="-20">
+        <Image url="@assets/start.png" />
+    </ImageView>
+
+    <!-- Joining Game Text -->
+    <Label layoutX="253.0" layoutY="87.0" style="-fx-font-size: 48px; -fx-fill: white; -fx-font-weight: bold; -fx-font-family: 'Arial Black';" text="JOIN A MULTIPLAYER GAME!" textAlignment="CENTER" textFill="WHITE" />
+
+    <!-- Enter Text Field -->
+    <Label fx:id="EnterTextField" layoutX="394.0" layoutY="147.0" prefHeight="79.0" prefWidth="492.0" style="-fx-background-radius: 10; -fx-font-size: 40px; -fx-padding: 10; -fx-font-family: 'Arial Black'; -fx-text-fill: #090909;" text="Please enter your..." />
+
+    <!-- Player Name Label -->
+    <Label layoutX="306.0" layoutY="267.0" prefWidth="200.0" styleClass="label" text="...username" />
+
+    <!-- Player Name Field -->
+    <TextField fx:id="playerNameField" layoutX="590.0" layoutY="267.0" prefHeight="48.0" prefWidth="200.0" styleClass="text-input-field" />
+
+    <!-- Server Address Label -->
+    <Label layoutX="306.0" layoutY="351.0" styleClass="label" text="...server address" />
+
+    <!-- Server Address Field -->
+    <TextField fx:id="serverAddress" layoutX="590.0" layoutY="351.0" prefWidth="200.0" styleClass="text-input-field" />
+
+    <!-- Server Port Label -->
+    <Label layoutX="305.0" layoutY="435.0" styleClass="label" text="...server port" />
+
+    <!-- Server Port Field -->
+    <TextField fx:id="serverPortField" layoutX="590.0" layoutY="435.0" prefHeight="48.0" prefWidth="200.0" styleClass="text-input-field" />
+
+    <Button fx:id="connectButton" layoutX="834.0" layoutY="514.0" style="-fx-text-fill: white; -fx-font-size: 24px; -fx-background-radius: 55; -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);" styleClass="button" text="Connect to Game" />
+
+    <!-- Choose Avatar Button -->
+    <Button fx:id="chooseAvatar" layoutX="834.0" layoutY="426.0" prefHeight="57.0" prefWidth="269.0" text="Choose Avatar" />
+
+    <!--HomeButton-->
+    <Button fx:id="backToHomeButton" layoutX="1045.0" layoutY="14.0" mnemonicParsing="false" onAction="#toHome" styleClass="button2" text="Back to Home" />
+
+</AnchorPane>

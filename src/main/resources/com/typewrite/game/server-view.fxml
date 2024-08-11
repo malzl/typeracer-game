@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="720.0" prefWidth="1280.0" styleClass="root-pane" stylesheets="@assets/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.multiple.ServerView">
+
+    <!-- Typing Guy Image -->
+    <ImageView fx:id="serverImage" fitHeight="281.0" fitWidth="304.0" layoutX="973.0" layoutY="382.0" preserveRatio="true" rotate="5">
+        <Image url="@assets/typing guy.png" />
+    </ImageView>
+
+    <!-- Server Image -->
+    <ImageView fx:id="typewriterImage" fitHeight="198.0" fitWidth="198.0" layoutX="97.0" layoutY="67.0" preserveRatio="true" rotate="-20">
+        <Image url="@assets/server.png" />
+    </ImageView>
+
+    <!-- Server Control Text -->
+    <Label layoutX="393.0" layoutY="125.0" style="-fx-font-size: 48px; -fx-fill: white; -fx-font-weight: bold; -fx-font-family: 'Arial Black';" text="SERVER CONTROL" textAlignment="CENTER" textFill="WHITE" />
+
+    <!-- Port Field -->
+    <TextField fx:id="portField" layoutX="642.0" layoutY="261.0" prefHeight="55.0" prefWidth="167.0" styleClass="text-input-field" />
+
+    <!-- Start Button -->
+    <Button fx:id="startButton" layoutX="417.0" layoutY="260.0" mnemonicParsing="false" styleClass="button" text="Start Server" />
+
+    <!-- Stop Button -->
+    <Button fx:id="stopButton" disable="true" layoutX="556.0" layoutY="354.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="167.0" style="-fx-background-color: #e74c3c;" styleClass="button-disabled" text="Stop" />
+
+    <!-- Message label-->
+    <Label fx:id="messageLabel" layoutX="302.0" layoutY="442.0" prefHeight="50.0" prefWidth="679.0" styleClass="message-label" />
+
+    <!-- Dark Mode Button -->
+    <Button fx:id="toggleDarkModeButton" layoutX="12.0" layoutY="20.0" mnemonicParsing="false" onAction="#toggleDarkMode" prefHeight="57.0" prefWidth="184.0" styleClass="music-button" text="Dark Mode"/>
+
+</AnchorPane>

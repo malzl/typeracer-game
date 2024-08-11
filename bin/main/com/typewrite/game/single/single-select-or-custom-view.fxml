@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.single.SingleSelectOrCustomController">
+    <AnchorPane prefHeight="200.0" prefWidth="200.0" snapToPixel="false">
+    <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+        <viewport>
+            <Rectangle2D height="720.0" minX="200.0" minY="320.0" width="1280.0" />
+        </viewport>
+        <Image url="@../assets/game_bg.jpg" />
+    </ImageView>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#59595975" height="720.0" stroke="#2424244a" strokeType="INSIDE" width="1280.0" />
+        <AnchorPane layoutX="126.0" layoutY="35.0" prefHeight="220.0" prefWidth="1050.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2424244a" height="220.0" layoutY="-8.0" stroke="#2424244a" strokeType="INSIDE" width="1050.0" />
+            <Label layoutX="25.0" layoutY="25.0" text="Start with built in novels" textFill="WHITE">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+         <HBox fx:id="builtInHBox" alignment="CENTER_LEFT" layoutX="25.0" layoutY="65.0" prefHeight="130.0" prefWidth="1000.0" spacing="80.0" />
+        </AnchorPane>
+        <AnchorPane layoutX="126.0" layoutY="269.0" prefHeight="420.0" prefWidth="1050.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2424244a" height="420.0" stroke="#2424244a" strokeType="INSIDE" width="1050.0" />
+            <Label layoutX="25.0" layoutY="25.0" text="Start with custom" textFill="WHITE">
+                <font>
+                    <Font size="24.0" />
+                </font>
+            </Label>
+            <TextArea fx:id="customArea" layoutX="26.0" layoutY="71.0" prefHeight="271.0" prefWidth="1000.0" wrapText="true" />
+            <Button layoutX="26.0" layoutY="354.0" mnemonicParsing="false" onAction="#onCustomStartClick" prefHeight="40.0" prefWidth="1000.0" text="Start" />
+        </AnchorPane>
+    </AnchorPane>
+</StackPane>

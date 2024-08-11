@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" styleClass="root-pane" stylesheets="@assets/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.multiple.lobby.LobbyView">
+
+   <!-- Background Image -->
+   <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="false" styleClass="image-view-dark-filter">
+      <Image url="@assets/race-track-background.jpg" />
+   </ImageView>
+
+   <!-- Title and Rectangle Background -->
+   <Rectangle arcHeight="20.0" arcWidth="20.0" fill="rgba(0, 0, 0, 0.5)" height="55.0" layoutX="46.0" layoutY="43.0" width="482.0" />
+   <Label fx:id="titleLabel" layoutX="61.0" layoutY="26.0" prefHeight="90.0" prefWidth="482.0" style="-fx-font-size: 48" styleClass="header-label" text="TypeRacer Lobby" />
+
+   <!-- Players ScrollPane -->
+   <ScrollPane fx:id="playersPane" layoutX="46.0" layoutY="180.0" prefHeight="500.0" prefWidth="512.0" styleClass="scroll-pane">
+      <VBox fx:id="playersBox" prefHeight="611.0" prefWidth="505.0" />
+   </ScrollPane>
+   <Label fx:id="playersLabel" layoutX="46.0" layoutY="123.0" styleClass="label" text="Players: " />
+
+   <!-- Ready Button -->
+   <Button fx:id="readyButton" layoutX="851.0" layoutY="613.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="343.0" styleClass="button" text="Ready" />
+
+   <!-- chat Text Field -->
+   <TextField fx:id="chatTextField" layoutX="850.0" layoutY="551.0" prefHeight="48.0" prefWidth="223.0" styleClass="text-input-field" />
+
+   <!-- Send Button -->
+   <Button fx:id="messageSend" layoutX="1091.0" layoutY="546.0" mnemonicParsing="false" styleClass="button" text="Send" />
+
+   <!-- chat VBox -->
+   <AnchorPane fx:id="chatAnchor" layoutX="841.0" layoutY="180.0" prefHeight="362.0" prefWidth="361.0">
+      <VBox fx:id="fxmlChatVbox" prefHeight="359.0" prefWidth="355.0" styleClass="chat-box" />
+   </AnchorPane>
+
+   <!-- Music Button -->
+   <Button fx:id="musicButton" layoutX="860.0" layoutY="43.0" mnemonicParsing="false" onAction="#toggleMusic" styleClass="music-button" text="Music On" />
+
+   <!-- SFX Button -->
+   <Button fx:id="sfxButton" layoutX="1048.0" layoutY="43.0" mnemonicParsing="false" onAction="#toggleSfx" prefHeight="55.0" prefWidth="146.0" styleClass="music-button" text="SFX On" />
+</AnchorPane>

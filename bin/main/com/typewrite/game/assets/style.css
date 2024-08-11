@@ -1,0 +1,89 @@
+.button {
+    -fx-background-color: #da551e;
+    -fx-text-fill: #d9edf7;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-background-radius: 55;
+    -fx-padding: 10 20 10 20;
+}
+
+.button:hover {
+    -fx-background-color: #ca4513;
+    -fx-font-size: 24px;
+}
+
+.button:pressed {
+    -fx-background-color: #c65222;
+    -fx-font-size: 24px;
+}
+
+.card-pane{
+    -fx-border-width: 5px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-background-color: rgba(194, 60, 9, 0.89);
+    -fx-border-color: rgba(194, 60, 9, 0.89);
+
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.connect-button {
+    -fx-background-color: #c65222;
+    -fx-text-fill: #d9edf7;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-background-radius: 55;
+    -fx-padding: 10 20 10 20;
+}
+
+.button-disabled {
+    -fx-background-color: gray;
+    -fx-text-fill: #d9edf7;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-background-radius: 55;
+    -fx-padding: 10 20 10 20;
+}
+
+
+.card-pane:hover {
+    -fx-border-radius: 20px;
+    -fx-border-color: #0bbbda;
+}
+
+
+.game-card {
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-background-color: rgb(212, 202, 197);
+}
+
+.client-box {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.ready-label {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #e4ffe1;
+    -fx-border-color: #27ae60;
+    -fx-border-width: 2px;
+}
+
+.not-ready-label {
+    -fx-text-fill: gray;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #a6a6a6;
+    -fx-border-width: 2px;
+}

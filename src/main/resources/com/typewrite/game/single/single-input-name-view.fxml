@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.single.SingleInputNameController">
+   <AnchorPane fx:id="rootPane" prefHeight="200.0" prefWidth="200.0" snapToPixel="false">
+      <!-- Background Image -->
+      <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="false" >
+         <Image url="@../assets/race-track-background.jpg" />
+      </ImageView>
+
+      <!-- Semi-transparent overlay rectangle -->
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="rgba(0, 0, 0, 0.5)" height="58.0" layoutX="350.0" layoutY="282.0" width="572.0" />
+
+      <!-- Text asking for racer's name -->
+      <Text fx:id="nameText" layoutX="373.0" layoutY="325.0" style="-fx-font-size: 40; -fx-fill: white; -fx-font-weight: bold; -fx-font-family: 'Arial Black';" text="What's your racer name:" textAlignment="CENTER" />
+
+      <!-- Input field for user's name -->
+      <TextField fx:id="userNameField" layoutX="353.0" layoutY="349.0" prefHeight="58.0" prefWidth="572.0" styleClass="text-input-field" onKeyPressed="#handleEnterPressed"/>
+
+      <!-- Go Button-->
+      <Button fx:id="goButton" layoutX="539.0" layoutY="422.0" mnemonicParsing="false" onAction="#onInputNameClick" prefHeight="68.0" prefWidth="203.0" styleClass="button" text="GO!" />
+
+      <!--HomeButton-->
+      <Button fx:id="backToHomeButton" layoutX="1045.0" layoutY="14.0" mnemonicParsing="false" onAction="#toHome" styleClass="button2" text="Back to Home" />
+
+   </AnchorPane>
+</StackPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="520.0" prefWidth="980.0" style="-fx-background-color: rgba(173,216,230,0.95);"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.typewrite.game.controller.multiple.ClientView">
+    <stylesheets>
+        <URL value="@assets/style.css"/>
+    </stylesheets>
+    <Label layoutX="351.0" layoutY="48.0" styleClass="game-card" text="Joining game">
+        <font>
+            <Font size="45.0"/>
+        </font>
+    </Label>
+    <Label layoutX="306.0" layoutY="187.0" styleClass="game-card" text="Player name">
+        <font>
+            <Font size="28.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="playerNameField" layoutX="540.0" layoutY="181.0" prefWidth="200.0" styleClass="card-pane"/>
+    <Label layoutX="314.0" layoutY="360.0" styleClass="game-card" text="Server port">
+        <font>
+            <Font size="28.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="serverPortField" layoutX="540.0" layoutY="354.0" prefWidth="200.0" styleClass="card-pane"/>
+    <Button fx:id="connectButton" layoutX="442.0" layoutY="437.0" styleClass="connect-button" text="Connect"/>
+    <TextField fx:id="serverAddress" layoutX="540.0" layoutY="266.0" prefWidth="200.0" styleClass="card-pane"/>
+    <Label layoutX="306.0" layoutY="273.0" styleClass="game-card" text="Server Address">
+        <font>
+          <Font size="23.0"/>
+        </font>
+    </Label>
+</AnchorPane>

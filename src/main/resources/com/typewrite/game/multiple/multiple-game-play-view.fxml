@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="parentStack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.multiple.MultipleGamePlayController">
+   <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+      <viewport>
+         <Rectangle2D height="720.0" minX="220.0" minY="320.0" width="1280.0" />
+      </viewport>
+      <Image url="@../assets/background.jpg" />
+   </ImageView>
+   <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(0,0,0,0.5);">
+      <AnchorPane layoutX="340.0" layoutY="31.0" prefHeight="579.0" prefWidth="600.0" styleClass="game-card">
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="rgba(31, 147, 255, 0.2)" height="234.0" layoutX="40.0" layoutY="83.0" stroke="#dae0e5" strokeType="INSIDE" width="521.0" />
+         <StackPane fx:id="contentStack" layoutX="42.0" layoutY="91.0" prefHeight="217.0" prefWidth="515.0">
+            <Canvas fx:id="canvas" height="217.0" width="515.0" />
+         </StackPane>
+         <TextArea fx:id="textArea" layoutX="40.0" layoutY="329.0" prefHeight="220.0" prefWidth="521.0" styleClass="game-text-area" wrapText="true">
+            <font>
+               <Font name="Arial" size="20.0" />
+            </font>
+         </TextArea>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="36.0" layoutX="40.0" layoutY="24.0" stroke="#777777" strokeType="INSIDE" width="521.0" />
+         <ImageView fitHeight="30.0" fitWidth="60.0" layoutX="40.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/time.png" />
+         </ImageView>
+         <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="380.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/Host.png" />
+         </ImageView>
+         <Label fx:id="time" contentDisplay="CENTER" layoutX="88.0" layoutY="30.0" prefHeight="23.0" prefWidth="83.0" styleClass="game-stats-label" text="1.24 S" textFill="#242424" />
+         <Label fx:id="host" contentDisplay="CENTER" layoutX="415.0" layoutY="30.0" prefHeight="23.0" prefWidth="139.0" styleClass="game-host-info-label" text="192.168.31.1" textFill="#242424" />
+         <Label fx:id="tickOutTime" alignment="CENTER" contentDisplay="CENTER" layoutX="159.0" layoutY="30.0" prefHeight="27.0" prefWidth="208.0" styleClass="game-stats-label" text="5" textFill="#ef0404" />
+      </AnchorPane>
+
+      <!-- Player cards -->
+      <AnchorPane fx:id="player1" layoutX="14.0" layoutY="33.0" prefHeight="161.0" prefWidth="299.0" styleClass="game-card">
+         <Circle fill="#bc43e5" layoutX="44.0" layoutY="44.0" radius="30.0" stroke="#a6a6a6" strokeType="INSIDE" />
+         <Line endX="189.33334350585938" endY="-7.62939453125E-6" layoutX="108.0" layoutY="85.0" startX="-108.00000762939453" startY="-7.62939453125E-6" stroke="#9a9a9a" />
+         <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="18.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/speed.png" />
+         </ImageView>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="36.0" layoutX="14.0" layoutY="93.0" stroke="#777777" strokeType="INSIDE" width="275.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="14.0" layoutX="14.0" layoutY="134.0" stroke="#777777" strokeType="INSIDE" width="275.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fc346" height="10.0" layoutX="14.0" layoutY="136.0" stroke="#75757500" strokeType="INSIDE" width="160.0" />
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="34.0" prefHeight="15.0" prefWidth="48.0" styleClass="initials-label" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="94.0" layoutY="31.0" prefHeight="23.0" prefWidth="195.0" styleClass="player-name-label" text="Player1" textFill="#242424" />
+         <Label contentDisplay="CENTER" layoutX="76.0" layoutY="98.0" prefHeight="23.0" prefWidth="195.0" styleClass="game-stats-label" text="10 WPM" />
+      </AnchorPane>
+
+      <!-- Player 2 -->
+      <AnchorPane fx:id="player2" layoutX="967.0" layoutY="33.0" prefHeight="161.0" prefWidth="299.0" styleClass="game-card">
+         <Circle fill="#46b6cb" layoutX="44.0" layoutY="44.0" radius="30.0" stroke="#a6a6a6" strokeType="INSIDE" />
+         <Line endX="189.33334350585938" endY="-7.62939453125E-6" layoutX="108.0" layoutY="85.0" startX="-108.00000762939453" startY="-7.62939453125E-6" stroke="#9a9a9a" />
+         <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="20.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/speed.png" />
+         </ImageView>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="36.0" layoutX="14.0" layoutY="92.0" stroke="#777777" strokeType="INSIDE" width="275.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="14.0" layoutX="14.0" layoutY="134.0" stroke="#777777" strokeType="INSIDE" width="275.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fc346" height="10.0" layoutX="14.0" layoutY="136.0" stroke="#75757500" strokeType="INSIDE" width="160.0" />
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="34.0" prefHeight="15.0" prefWidth="48.0" styleClass="initials-label" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="94.0" layoutY="31.0" prefHeight="23.0" prefWidth="195.0" styleClass="player-name-label" text="Player2" textFill="#242424" />
+         <Label contentDisplay="CENTER" layoutX="76.0" layoutY="98.0" prefHeight="23.0" prefWidth="195.0" styleClass="game-stats-label" text="10 WPM" textFill="#242424" />
+      </AnchorPane>
+
+      <!-- Player 3 -->
+      <AnchorPane fx:id="player3" layoutX="14.0" layoutY="240.0" prefHeight="161.0" prefWidth="299.0" styleClass="game-card">
+         <Circle fill="#ff8246" layoutX="44.0" layoutY="44.0" radius="30.0" stroke="#a6a6a6" strokeType="INSIDE" />
+         <Line endX="189.33334350585938" endY="-7.62939453125E-6" layoutX="108.0" layoutY="85.0" startX="-108.00000762939453" startY="-7.62939453125E-6" stroke="#9a9a9a" />
+         <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="18.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/speed.png" />
+         </ImageView>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="36.0" layoutX="14.0" layoutY="92.0" stroke="#777777" strokeType="INSIDE" width="275.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="14.0" layoutX="14.0" layoutY="134.0" stroke="#777777" strokeType="INSIDE" width="275.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fc346" height="10.0" layoutX="14.0" layoutY="136.0" stroke="#75757500" strokeType="INSIDE" width="160.0" />
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="34.0" prefHeight="15.0" prefWidth="48.0" styleClass="initials-label" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="94.0" layoutY="31.0" prefHeight="23.0" prefWidth="195.0" styleClass="player-name-label" text="Player3" textFill="#242424" />
+         <Label contentDisplay="CENTER" layoutX="76.0" layoutY="98.0" prefHeight="23.0" prefWidth="195.0" styleClass="game-stats-label" text="10 WPM" textFill="#242424" />
+      </AnchorPane>
+
+      <!-- Player 4 -->
+      <AnchorPane fx:id="player4" layoutX="967.0" layoutY="240.0" prefHeight="161.0" prefWidth="299.0" styleClass="game-card">
+         <Circle fill="#e84393" layoutX="44.0" layoutY="44.0" radius="30.0" stroke="#a6a6a6" strokeType="INSIDE" />
+         <Line endX="189.33334350585938" endY="-7.62939453125E-6" layoutX="108.0" layoutY="85.0" startX="-108.00000762939453" startY="-7.62939453125E-6" stroke="#9a9a9a" />
+         <ImageView fitHeight="53.0" fitWidth="60.0" layoutX="20.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../assets/speed.png" />
+         </ImageView>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="36.0" layoutX="14.0" layoutY="93.0" stroke="#777777" strokeType="INSIDE" width="275.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="14.0" layoutX="14.0" layoutY="134.0" stroke="#777777" strokeType="INSIDE" width="275.0" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1fc346" height="10.0" layoutX="14.0" layoutY="136.0" stroke="#75757500" strokeType="INSIDE" width="160.0" />
+         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="34.0" prefHeight="15.0" prefWidth="48.0" styleClass="initials-label" textFill="WHITE" />
+         <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="94.0" layoutY="31.0" prefHeight="23.0" prefWidth="195.0" styleClass="player-name-label" text="Player4" textFill="#242424" />
+         <Label contentDisplay="CENTER" layoutX="76.0" layoutY="98.0" prefHeight="23.0" prefWidth="195.0" styleClass="game-stats-label" text="10 WPM" textFill="#242424" />
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="630.0" prefHeight="70.0" prefWidth="1280.0">
+         <Button fx:id="bomb" ellipsisString="" mnemonicParsing="false" prefHeight="79.0" prefWidth="83.0" styleClass="emoji-bth" textOverrun="CENTER_ELLIPSIS">
+            <graphic>
+               <ImageView fitHeight="59.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@../assets/bomb.png" />
+               </ImageView>
+            </graphic></Button>
+      </HBox>
+   </AnchorPane>
+   <AnchorPane fx:id="kickTipPane" disable="true" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0.35); -fx-text-fill: RED">
+      <children>
+         <Label layoutX="418.0" layoutY="301.0" style="-fx-font-size:80; -fx-font-family: 'Arial Black'; -fx-text-fill: RED" text="KICK OUT">
+         </Label>
+      </children>
+   </AnchorPane>
+</StackPane>

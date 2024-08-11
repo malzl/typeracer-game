@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../assets/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.typewrite.game.controller.multiple.MultipleSelectOrCustomController">
+    <AnchorPane prefHeight="720.0" prefWidth="1280.0" snapToPixel="false" styleClass="root-pane">
+
+        <!-- Built-in Novels Section -->
+        <AnchorPane layoutX="126.0" layoutY="35.0" prefHeight="220.0" prefWidth="1050.0">
+            <Rectangle arcHeight="20.0" arcWidth="20.0" height="220.0" layoutY="-8.0" strokeType="INSIDE" styleClass="built-in-background" width="1050.0" />
+            <Label layoutX="27.0" layoutY="20.0" styleClass="built-in-label" text="Start with built-in novels" />
+            <HBox fx:id="builtInHbox" alignment="CENTER_LEFT" layoutX="20.0" layoutY="65.0" prefHeight="130.0" prefWidth="1000.0" spacing="80.0" />
+
+            <!--Difficulty Selector-->
+            <Label layoutX="856.0" layoutY="-2.0" styleClass="built-in-label-difficulty" text="Select Difficulty:" />
+            <ComboBox fx:id="difficultySelector" layoutX="850.0" layoutY="25.0" prefHeight="30.0" prefWidth="150.0" styleClass="difficulty-combo-box" />
+        </AnchorPane>
+
+        <!-- Custom Novels Section -->
+        <AnchorPane layoutX="126.0" layoutY="269.0" prefHeight="420.0" prefWidth="1050.0">
+            <Rectangle arcHeight="20.0" arcWidth="20.0" height="370.0" layoutY="-8.0" strokeType="INSIDE" styleClass="custom-background" width="723.0" />
+            <Label layoutX="26.0" layoutY="14.0" styleClass="custom-label" text="Start with custom novels" />
+            <TextArea fx:id="customArea" layoutX="26.0" layoutY="73.0" prefHeight="269.0" prefWidth="663.0" styleClass="custom-text-area" wrapText="true" />
+            <Button fx:id="startButton" layoutX="826.0" layoutY="286.0" mnemonicParsing="false" onAction="#onCustomStartClick" prefHeight="55.0" prefWidth="168.0" styleClass="button2" text="Start" />
+            <ImageView fx:id="BooksImage" fitHeight="220.0" fitWidth="235.0" layoutX="800.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../assets/Stack of Books.png" />
+                </image>
+            </ImageView>
+
+        </AnchorPane>
+    </AnchorPane>
+</StackPane>
+
+

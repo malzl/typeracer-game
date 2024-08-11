@@ -1,0 +1,383 @@
+.root-pane {
+    -fx-background-color: #2c3e50;
+}
+.root-pane-avatar{
+    -fx-background-color: rgb(44, 62, 80);
+}
+
+.welcome-text {
+    -fx-font-size: 70;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial Black';
+}
+
+.input-name-text {
+    -fx-font-size: 38;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial Black';
+}
+.name-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+    -fx-padding: 5px;
+    -fx-background-color: #285ce8;
+    -fx-font-family: Arial;
+    -fx-background-radius: 10px;
+}
+
+.typeracer-text {
+    -fx-font-size: 48;
+    -fx-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial Black';
+}
+
+.select-label {
+    -fx-font-size: 38;
+    -fx-fill: white;
+    -fx-font-family: 'Arial Black';
+}
+.header-label {
+    -fx-font-size: 80px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial Black';
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: #285ce8;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);
+    -fx-background-radius: 55;
+    -fx-font-family: 'Arial Black';
+    -fx-padding: 10 20 10 20;
+}
+
+.music-button, .sfx-button {
+    -fx-background-color: #762193;
+}
+
+
+/* Additional button styles */
+.button2 {
+    -fx-background-color: #a63304;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);
+    -fx-background-radius: 55;
+    -fx-font-family: 'Arial Black';
+    -fx-padding: 10 20 10 20;
+}
+
+.button:hover {
+    -fx-background-color: #640b37;
+    -fx-font-size: 24px;
+}
+
+.button:pressed {
+    -fx-background-color: #640b37;
+    -fx-font-size: 24px;
+}
+
+/* Other styles */
+.card-pane {
+    -fx-border-width: 5px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+.label{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Arial Black';
+    -fx-text-fill: white;
+}
+
+.button-disabled {
+    -fx-background-color: gray;
+    -fx-text-fill: #d9edf7;
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
+    -fx-background-radius: 55;
+    -fx-padding: 10 20 10 20;
+}
+
+.card-pane:hover {
+    -fx-border-radius: 20px;
+    -fx-border-color: #285ce8;
+}
+
+.game-card {
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-background-color: rgb(60, 60, 60);
+    -fx-effect: dropshadow(gaussian, black, 10, 0.5, 0, 0);
+}
+
+.client-box {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+}
+
+.ready-label {
+    -fx-text-fill: green;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #e4ffe1;
+    -fx-border-color: #27ae60;
+    -fx-border-width: 2px;
+}
+
+.not-ready-label {
+    -fx-text-fill: gray;
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #f2f2f2;
+    -fx-border-color: #a6a6a6;
+    -fx-border-width: 2px;
+}
+
+.emoji-bth {
+    -fx-background-color: rgba(153, 158, 255, 0.82);
+    -fx-background-radius: 20;
+    -fx-padding: 5 10 5 10;
+}
+
+.difficulty-combo-box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 15;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Arial Black';
+}
+
+.difficulty-combo-box .list-cell {
+    -fx-background-color: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-family: Arial;
+    -fx-background-radius: 15;
+    -fx-text-fill: #285ce8;
+}
+
+.difficulty-combo-box .list-cell:hover {
+    -fx-background-color: #285ce8;
+    -fx-text-fill: #ffffff;
+}
+
+.text-input-field {
+    -fx-background-radius: 20;
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 10;
+    -fx-background-color: rgba(9, 8, 8, 0.89);
+    -fx-font-family: 'Arial Black';
+}
+
+.message-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-family: 'Arial Black';
+    -fx-background-color: rgba(0,0,0,0.34);
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+}
+
+.text-field {
+    -fx-padding: 5px;
+    -fx-background-radius: 15;
+    -fx-background-color: rgba(188, 67, 229, 0.02);
+    -fx-effect: dropshadow(gaussian, rgba(9, 8, 8, 0.53), 10, 0.5, 0, 0);
+    -fx-font-family: 'Arial Black';
+}
+
+.novel-section {
+    -fx-effect: dropshadow(gaussian, rgba(9, 8, 8, 0.53), 10, 0.5, 0, 0);
+}
+
+.section-label {
+    -fx-font-size: 24px;
+    -fx-font-family: 'Arial Black';
+    -fx-text-fill: rgba(40, 38, 38, 0.99);
+}
+
+.difficulty-label {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Arial Black';
+    -fx-text-fill: white;
+}
+
+.custom-area {
+    -fx-background-radius: 15;
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 10px;
+    -fx-font-size: 20px;
+    -fx-font-family: 'Arial';
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian, #ffffff, 10, 0.5, 0, 0);
+}
+
+.game-background {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+}
+
+.game-text-area {
+    -fx-background-color: #ecf0f1;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 20;
+    -fx-text-fill: #2c3e50;
+    -fx-background-radius: 10;
+}
+
+.initials-label {
+    -fx-font-size: 22;
+    -fx-font-family: 'Arial Black';
+    -fx-text-fill: white;
+}
+.current-player {
+    -fx-background-color: rgb(60, 60, 60);
+}
+
+.name-label {
+    -fx-background-color: #285ce8;
+    -fx-padding: 5px;
+    -fx-font-family: Arial;
+    -fx-background-radius: 10px;;
+}
+
+.game-stats-label {
+    -fx-font-size: 23;
+    -fx-font-family: 'Arial';
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+.game-host-info-label {
+    -fx-font-size: 14;
+    -fx-font-family: 'Arial';
+    -fx-text-fill: rgb(255, 255, 255);
+}
+
+.message-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-family: 'Arial Black';
+    -fx-background-color: rgba(0,0,0,0.34);
+    -fx-background-radius: 15;
+    -fx-padding: 10;
+}
+.chat-box {
+    -fx-background-radius: 15;
+    -fx-background-color: #ffffff;
+    -fx-padding: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(123, 41, 150, 0.87), 10, 0.5, 0, 0);
+    -fx-font-family: 'Arial';
+}
+
+.scroll-pane {
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, #ffffff, 10, 0.5, 0, 0);
+    -fx-font-family: 'Arial';
+}
+
+.text-field {
+    -fx-padding: 5px;
+    -fx-background-radius: 15;
+    -fx-background-color: rgba(106, 104, 104, 0.73);
+    -fx-effect: dropshadow(gaussian, rgba(9, 8, 8, 0.53), 10, 0.5, 0, 0);
+    -fx-font-family: 'Arial Black';
+}
+
+.semaphore-box {
+    -fx-background-color: rgba(49, 47, 47, 0.83);
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+    -fx-border-radius: 30px;
+    -fx-background-radius: 30px;
+}
+
+.semaphore-light {
+    -fx-stroke-width: 4px;
+}
+/* Built-in novels section */
+.built-in-background {
+    -fx-arc-height: 20;
+    -fx-arc-width: 20;
+    -fx-fill: #2c3e50;
+    -fx-effect: dropshadow(gaussian, WHITE, 10, 0.5, 0, 0);
+}
+
+.built-in-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Arial Black';
+}
+
+.built-in-label-difficulty {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: 'Arial Black';
+}
+
+/* Custom novels section */
+.custom-background {
+    -fx-arc-height: 20;
+    -fx-arc-width: 20;
+    -fx-fill: #2c3e50;
+    -fx-effect: dropshadow(gaussian, WHITE, 10, 0.5, 0, 0);
+}
+
+.custom-label {
+    -fx-font-size: 24px;
+    -fx-fill: #ffffff;
+    -fx-font-family: 'Arial Black';
+}
+
+.custom-text-area {
+    -fx-background-radius: 15;
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 10px;
+    -fx-font-size: 20px;
+    -fx-text-fill: BLACK;
+    -fx-font-family: 'Arial';
+    -fx-effect: dropshadow(gaussian, #ffffff, 10, 0.5, 0, 0);
+}
+/* Rectangle style for game canvas */
+.game-canvas-rect {
+    -fx-arc-height: 5;
+    -fx-arc-width: 5;
+    -fx-fill: rgb(44, 62, 80);
+    -fx-stroke: #dae0e5;
+}
+.vbox {
+    -fx-background-color: rgba(0,0,0,0.6);
+    -fx-padding: 20px;
+    -fx-background-radius: 15px;
+}
+
+.performance-summary-box {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+}
+
+.tip-label {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 40px;
+}
+
+.image-view-dark-filter {
+    -fx-blend-mode: multiply;
+    -fx-opacity: 0.4;
+}
+

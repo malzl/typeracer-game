@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: rgba(173,216,230,0.95);"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.typewrite.game.controller.multiple.ServerView">
+    <stylesheets>
+        <URL value="@assets/style.css"/>
+    </stylesheets>
+    <Button fx:id="startButton" layoutX="355.0" layoutY="282.0" mnemonicParsing="false" styleClass="button"
+            text="Start Server"/>
+    <Button fx:id="stopButton" disable="true" layoutX="363.0" layoutY="360.0" mnemonicParsing="false" prefHeight="50.0"
+            prefWidth="167.0" styleClass="button-disabled" text="Stop"/>
+    <Label fx:id="messageLabel" layoutX="269.0" layoutY="483.0" prefHeight="50.0" prefWidth="760.0"
+           styleClass="card-pane"/>
+    <Label layoutX="537.0" layoutY="202.0" prefHeight="80.0" prefWidth="207.0" text="Server Control"
+           textAlignment="CENTER">
+        <font>
+            <Font size="28.0"/>
+        </font>
+    </Label>
+    <TextField fx:id="portField" layoutX="582.0" layoutY="284.0" prefHeight="50.0" prefWidth="195.0">
+        <font>
+          <Font size="21.0"/>
+        </font>
+    </TextField>
+</AnchorPane>

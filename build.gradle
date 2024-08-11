@@ -1,0 +1,118 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'checkstyle'
+    id 'com.github.spotbugs' version '6.0.11'
+    id 'com.diffplug.spotless' version '6.25.0'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'com.typewrite.game'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty 'mockito.mock-maker-inline', 'true'
+    systemProperty 'javafx.platform', 'headless'
+    systemProperty 'prism.order', 'sw'
+    systemProperty 'prism.verbose', 'true'
+}
+
+
+def javaFXVersion = '17.0.2'
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    implementation "org.openjfx:javafx-controls:$javaFXVersion"
+    implementation "org.openjfx:javafx-fxml:$javaFXVersion"
+    implementation "org.openjfx:javafx-graphics:$javaFXVersion"
+    implementation "org.openjfx:javafx-base:$javaFXVersion"
+    implementation "org.openjfx:javafx-swing:$javaFXVersion"
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.3'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.3'
+    testImplementation 'org.junit.platform:junit-platform-commons:1.9.3'
+
+    testImplementation 'org.junit.platform:junit-platform-commons:1.7.1'
+
+    testImplementation 'org.testfx:testfx-core:4.0.16-alpha'
+    testImplementation 'org.testfx:testfx-junit5:4.0.16-alpha'
+
+    testImplementation 'org.mockito:mockito-inline:5.2.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.2.0'
+
+    testImplementation 'net.bytebuddy:byte-buddy:1.14.5'
+
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+}
+
+javafx {
+    version = "17.0.6"
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.swing', 'javafx.media']
+}
+
+application {
+    mainModule = 'com.typewrite.game'
+    mainClass = 'com.typewrite.game.GameApp'
+    applicationDefaultJvmArgs = ['-Dprism.order=sw', '-Dprism.verbose=true']
+}
+
+checkstyle {
+    toolVersion = "10.15.0"
+    maxWarnings = 0
+    sourceSets = [sourceSets.main]
+}
+
+tasks.spotbugsMain {
+    reports.create("html") {
+        required = true
+        outputLocation = layout.buildDirectory.file("reports/spotbugs.html")
+    }
+    enabled = false
+}
+
+tasks.spotbugsTest {
+    reports.create("html") {
+        required = true
+        outputLocation = layout.buildDirectory.file("reports/spotbugsTests.html")
+    }
+    enabled = false
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+        lineEndings 'UNIX'
+        target 'src/**/*.java'
+    }
+}
+
+tasks.withType(Javadoc) {
+    options {
+        addBooleanOption("Werror", true)
+    }
+    enabled = false
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+configurations.all {
+    exclude group: 'org.hamcrest', module: 'hamcrest-core'
+}
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'com.typewrite.game.ServerApp'
+    }
+}
